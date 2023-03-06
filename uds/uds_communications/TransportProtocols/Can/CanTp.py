@@ -351,6 +351,7 @@ class CanTp(iTp):
     def closeConnection(self):
         # deregister filters, listeners and notifiers etc
         # close can connection
+        self.__connection.close()
         pass
 
     ##
