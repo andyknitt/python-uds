@@ -52,3 +52,7 @@ class CanConnection(object):
 
         self.__bus.send(canMsg)
 
+    def close(self):
+        self.__notifier.stop()
+        for listener in self.__listeners:
+            listener.stop()
